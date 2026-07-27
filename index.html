@@ -1,1 +1,105 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Pour Toi</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Tangerine:wght@400;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
 
+<div class="stars" id="stars"></div>
+
+<!-- ===== SECTION 1 : L'ENVELOPPE ===== -->
+<section class="scene" id="scene-envelope">
+  <p class="hint">touche le sceau</p>
+  <div class="envelope" id="envelope">
+    <div class="envelope-back"></div>
+    <div class="envelope-letter" id="envelopeLetter">
+      <p class="letter-peek">Pour toi...</p>
+    </div>
+    <div class="envelope-front"></div>
+    <div class="envelope-flap" id="envelopeFlap">
+      <div class="seal" id="seal">❤</div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== SECTION 2 : LA LETTRE ===== -->
+<section class="scene letter-scene" id="scene-letter">
+  <div class="paper">
+    <p class="date">Bordeaux, un jour ordinaire devenu extraordinaire</p>
+    <p class="salutation">Mon amour,</p>
+
+    <p class="body-text">
+      Il existe des mots qu'on utilise tous les jours sans y penser,
+      et puis il y a ceux qu'on garde pour une seule personne.
+      Toi, tu es celle à qui je garde les miens.
+    </p>
+
+    <p class="body-text">
+      Depuis que tu es dans ma vie, les journées ordinaires ont pris
+      une couleur que je ne savais même pas qu'elles pouvaient avoir.
+      Ton rire change la texture de mes journées. Ta présence rend
+      le silence confortable. Même les petits riens deviennent
+      précieux quand c'est avec toi que je les vis.
+    </p>
+
+    <p class="body-text">
+      Je voulais t'écrire quelque chose de simple, mais sincère :
+      merci d'être exactement qui tu es. Merci de me faire rire,
+      de me faire réfléchir, de me faire du bien. J'ai construit
+      cette petite page juste pour toi, avec deux ou trois jeux
+      cachés dedans — parce que tu mérites qu'on prenne le temps
+      de te faire sourire, même à travers un écran.
+    </p>
+
+    <p class="signature-line">Avec tout mon cœur,</p>
+    <p class="signature">— moi</p>
+  </div>
+
+  <button class="scroll-down" id="toGames">continuer ↓</button>
+</section>
+
+<!-- ===== SECTION 3 : JEU 1 - ATTRAPE-CŒURS ===== -->
+<section class="scene game-scene" id="scene-game1">
+  <h2 class="game-title">Attrape mes cœurs</h2>
+  <p class="game-sub">Clique sur les cœurs avant qu'ils ne s'échappent. 30 secondes, à toi de jouer.</p>
+
+  <div class="game-hud">
+    <span>Score : <b id="hg-score">0</b></span>
+    <span>Temps : <b id="hg-time">30</b>s</span>
+  </div>
+
+  <div class="game-field" id="hg-field">
+    <button class="start-btn" id="hg-start">Commencer</button>
+  </div>
+
+  <p class="game-result" id="hg-result"></p>
+</section>
+
+<!-- ===== SECTION 4 : JEU 2 - MEMORY ===== -->
+<section class="scene game-scene" id="scene-game2">
+  <h2 class="game-title">Mémoire amoureuse</h2>
+  <p class="game-sub">Retrouve les paires en un minimum de coups.</p>
+
+  <div class="game-hud">
+    <span>Coups : <b id="mm-moves">0</b></span>
+    <span>Paires : <b id="mm-pairs">0</b>/8</span>
+  </div>
+
+  <div class="memory-grid" id="memoryGrid"></div>
+  <button class="start-btn small" id="mm-restart">Recommencer</button>
+</section>
+
+<!-- ===== SECTION 5 : FIN ===== -->
+<section class="scene final-scene" id="scene-final">
+  <p class="final-heart">❤</p>
+  <p class="final-text">Merci d'avoir joué jusqu'ici.<br>Je t'aime.</p>
+</section>
+
+<script src="script.js"></script>
+</body>
+</html>
